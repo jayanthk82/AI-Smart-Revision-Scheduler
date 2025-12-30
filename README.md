@@ -45,24 +45,19 @@ It is currently being **modernized and re-architected** using a more performant,
 
 ## 🔄 System Architecture (Current)
 
-Client (Web / Mobile) 
+1: Client (Web / Mobile) 
 
-|
+2: NGINX
 
-NGINX
+3: FastAPI Backend
 
-|
+4: MongoDB
 
-FastAPI Backend
+5: Background Workers (Async Tasks)
 
-|
+6: Reverse Proxy NGINX
 
-MongoDB
-
-|
-
-Background Workers (Async Tasks)
-
+7: Client (Web / Mobile) 
 
 ---
 
