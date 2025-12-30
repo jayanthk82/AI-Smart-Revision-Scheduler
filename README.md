@@ -1,88 +1,86 @@
-# RecallX - AI-Powered Personalized Learning Path Generator
+# 🧠 AI Smart Revision Scheduler
 
-## Stop Forgetting, Start Achieving.
+An AI-powered revision planning system designed to optimize long-term retention for competitive exam aspirants by intelligently scheduling, prioritizing, and automating revision cycles.
 
-RecallX is a smart revision tool that creates a personalized learning journey for every student. By tracking your learning, identifying knowledge gaps, and suggesting what to revise and when, RecallX helps you retain information longer and achieve your career goals faster.
+This project was **initially developed using Django, Django REST Framework, and SQL-based databases**, and deployed on **Render**.  
+It is currently being **modernized and re-architected** using a more performant, cloud-native stack with **FastAPI, Docker, MongoDB, and NGINX**.
 
-This project was developed for the Smart India Hackathon 2025.
+---
 
-### The Problem We Solve
+## 🚀 Key Features
 
-  - **Students forget most of what they study** in a short amount of time.
-  - **Generic learning paths waste time** and don't prepare students for real-world jobs.
-  - There's **no system to tell you when and what to revise**.
-  - **Skills learned aren't connected to actual job needs**.
+- 📅 **Intelligent Revision Scheduling**  
+  Dynamically prioritizes topics based on revision history, frequency, and importance.
 
-### Our Innovative Solution
+- 🤖 **AI-Assisted Content Handling**  
+  NLP-based summarization to help learners focus on high-impact revision content.
 
-RecallX is a revolutionary platform that tackles these challenges head-on. Here’s how:
+- ⚙️ **Asynchronous Background Processing**  
+  Automated revision reminders and scheduling using background tasks.
 
-  - **Smart Revision Tool**: Our intelligent system reminds you of the right topics at the right time.
-  - **Skill Extraction**: We extract skills from every learning activity, from solving a coding problem to uploading your notes.
-  - **Dynamic Skill Profiles**: RecallX creates a living, breathing profile of your skills that's always up-to-date.
-  - **Tailored Learning Journey**: We generate a personalized learning path that combines revision with new topics aligned with your goals.
-  - **Personalized Job Recommendations**: Get job suggestions and courses tailored to your unique skill profile.
+- 🌐 **RESTful API Architecture**  
+  Clean, modular APIs designed for seamless frontend or client integration.
 
-### How It Works
+- ☁️ **Cloud-Native & Scalable Design**  
+  Built with scalability, maintainability, and production-readiness in mind.
 
-1.  **Upload Anything**: Learners can upload notes, problems they've solved, or answers they've written.
-2.  **System Analysis**: Our system tags concepts and extracts relevant skills from the uploaded content.
-3.  **Forgetting Curve Application**: We apply the forgetting curve principle to determine what you need to revise each day.
-4.  **Knowledge Gap Identification**: The system identifies your weak areas and integrates them into your revision plan.
-5.  **New Learning Path Creation**: A curated learning path is generated just for you.
-6.  **Stay on Track**: Receive reminders and recommendations via your dashboard or email.
+---
 
-### Personalized Skill Path
+## 🏗️ Tech Stack Evolution
 
-  - **From Learning to Earning**: We bridge the gap between what you learn and what employers are looking for.
-  - **Example**: If you solve a problem on "SQL joins," we add "SQL" and "Databases" to your skill profile.
-  - **Career Mapping**: The tool maps your skill profile against the requirements for various job roles.
-  - **Upskilling Suggestions**: If you have missing skills, we suggest NCVET qualifications and NSQF-based training programs.
+### 🟢 Version 1 – Initial Implementation
+- Django  
+- Django REST Framework  
+- SQL Database  
+- Render (Cloud Deployment)
 
-### Technical Approach
+### 🔵 Version 2 – Ongoing Modernization
+- FastAPI  
+- MongoDB  
+- Docker  
+- NGINX  
+- Render (Production Hosting & CI/CD)
 
-  - **Backend**: Django and Django REST Framework are used to build our powerful REST APIs.
-  - **Frontend**: A user-friendly interface built with modern frontend technologies.
-  - **Database**: We use a local Postgres database for robust data storage.
-  - **Background Jobs**: Celery and Redis are used for background tasks like sending revision reminders and newsletters.
-  - **Integrations and APIs**:
-      - **Retool**: Dashboards for learners, trainers, and policymakers.
-      - **Email/Newsletter**: Automated nudges and updates to keep you on track.
-      - **Job Suggestions API**: Live job openings to help you find your dream job.
-      - **Resume Builder**: Automatically generate a resume from your skill profile.
+---
 
-### Getting Started
+## 🔄 System Architecture (Current)
 
-To run the project in a virtual environment, follow these steps:
+Client (Web / Mobile) 
 
-1.  **Run the Django server**:
-    ```bash
-    python manage.py runserver
-    ```
-2.  **Run the Celery worker**:
-    ```bash
-    celery -A backend worker --loglevel=info
-    ```
-3.  **Run the Celery beat scheduler**:
-    ```bash
-    celery -A backend beat --loglevel=INFO
-    ```
-4.  **Start the Redis server**:
-    ```bash
-    docker start my-redis-mailbox
-    ```
+|
 
-### Impact
+NGINX
 
-  - **For Students**:
-      - Better knowledge retention.
-      - Personalized skill journey aligned with career goals.
-      - Increased confidence with a clear view of progress.
-  - **For Teachers**:
-      - Real-time visibility into student retention.
-      - Ability to track skill growth and gaps.
-      - Data-driven insights for better mentoring.
-  - **For Industry**:
-      - Access to job-ready candidates with verified skill profiles.
-      - Faster and more efficient hiring process.
-      - Reduced cost of retraining freshers.
+|
+
+FastAPI Backend
+
+|
+
+MongoDB
+
+|
+
+Background Workers (Async Tasks)
+
+
+---
+
+## 🔁 CI/CD & Deployment Workflow
+
+- Source code is managed using **GitHub**.
+- The GitHub repository is directly linked to **Render**.
+- On every push to the main branch:
+  - Render automatically pulls the latest code
+  - Builds Docker images
+  - Deploys updated services without manual intervention
+
+CI/CD is handled using **Render’s native GitHub integration**, ensuring automated and reliable deployments.
+
+---
+
+## 🛠️ Local Development Setup
+
+```bash
+git clone https://github.com/your-username/ai-smart-revision-scheduler.git
+cd ai-smart-revision-scheduler
