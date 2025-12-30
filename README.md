@@ -78,6 +78,14 @@ Background Workers (Async Tasks)
 CI/CD is handled using **Render’s native GitHub integration**, ensuring automated and reliable deployments.
 
 ---
+## 🧪 API Testing & Developer Experience
+
+- Designed and validated REST APIs using **Postman** for end-to-end testing.
+- Created structured **Postman collections** to test authentication, CRUD operations, and edge cases.
+- Used environment variables in Postman to simulate multiple deployment environments (local, staging, production).
+- Improved API reliability by identifying request/response mismatches and handling error scenarios early in development.
+
+---
 
 ## 🛠️ Local Development Setup
 
